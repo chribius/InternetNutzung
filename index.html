@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Anonyme Umfrage zum Internetnutzungsverhalten – Klasse 8">
+  <title>Umfrage: Mein Internetverhalten</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><circle cx='16' cy='13' r='6' fill='none' stroke='white' stroke-width='2.5'/><path d='M10 22c0-3.3 2.7-5 6-5s6 1.7 6 5' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round'/></svg>">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="Umfrage Logo">
+        <rect width="32" height="32" rx="8" fill="var(--color-primary)"/>
+        <circle cx="16" cy="13" r="5.5" stroke="white" stroke-width="2.2" fill="none"/>
+        <path d="M9.5 23c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <circle cx="24" cy="8" r="3.5" fill="#FCD34D"/>
+        <path d="M24 6.5v3M22.5 8h3" stroke="#92400E" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">MeinInternet<strong>Check</strong></span>
+    </div>
+    <div class="header-right">
+      <span class="dsgvo-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        100% anonym
+      </span>
+      <button class="theme-toggle" data-theme-toggle aria-label="Dark Mode umschalten">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════ -->
+<main class="main-content">
+
+  <!-- FORTSCHRITTSLEISTE -->
+  <div class="progress-container" id="progressBar" aria-hidden="true">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-label" id="progressLabel">Seite 1 von 7</span>
+  </div>
+
+  <!-- ─── SEITE 0: EINWILLIGUNG / DSGVO ─── -->
+  <section class="survey-page active" id="page-0" data-page="0">
+    <div class="page-card consent-card">
+      <div class="consent-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22" fill="var(--color-primary-highlight)" stroke="var(--color-primary)" stroke-width="2"/>
+          <rect x="14" y="12" width="20" height="26" rx="3" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+          <path d="M18 20h12M18 25h12M18 30h8" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="33" cy="33" r="7" fill="var(--color-success)" />
+          <path d="M29.5 33l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1 class="page-title">Umfrage zum Internetverhalten</h1>
+      <p class="page-subtitle">Klasse 8 · Informatik / Medienkunde</p>
+
+      <div class="consent-box">
+        <h2 class="consent-heading">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Datenschutz &amp; Einwilligung (DSGVO)
+        </h2>
+        <ul class="consent-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Vollständig anonym</strong> – kein Name, keine E-Mail-Adresse wird gespeichert.</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Freiwillig</strong> – die Teilnahme ist freiwillig; du kannst jederzeit abbrechen.</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Nur für den Unterricht</strong> – die Ergebnisse werden ausschließlich in deiner Klasse ausgewertet.</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Keine Weitergabe</strong> – deine Antworten werden nicht an Dritte weitergegeben.</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Lokal gespeichert</strong> – Antworten werden nur in deinem Browser verarbeitet und <em>nicht</em> auf einem Server gespeichert.</span>
+          </li>
+        </ul>
+        <p class="consent-legal">Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) in Verbindung mit §&nbsp;7 BDSG. Verantwortlich: deine Lehrkraft im Rahmen des Schulunterrichts.</p>
+      </div>
+
+      <label class="consent-check">
+        <input type="checkbox" id="consentCheck" onchange="checkConsent()">
+        <span class="checkmark"></span>
+        <span>Ich habe die Datenschutzhinweise gelesen und nehme freiwillig teil.</span>
+      </label>
+
+      <div class="btn-row centered">
+        <button class="btn btn-primary btn-lg" id="startBtn" onclick="startSurvey()" disabled>
+          Umfrage starten
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 1: ALLGEMEINE NUTZUNG ─── -->
+  <section class="survey-page" id="page-1" data-page="1">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 1 von 6</span>
+        <h2 class="page-title">📱 Wie viel Zeit verbringst du online?</h2>
+        <p class="page-hint">Denk an einen normalen Schultag und ein Wochenende.</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q1">
+          1. Wie viele Stunden bist du an einem <strong>Schultag</strong> durchschnittlich im Internet?
+        </label>
+        <div class="radio-group" id="q1">
+          <label class="radio-card"><input type="radio" name="q1" value="unter1h"> <span>Weniger als 1 Stunde</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="1-2h"> <span>1 – 2 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="2-4h"> <span>2 – 4 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="4-6h"> <span>4 – 6 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q1" value="über6h"> <span>Mehr als 6 Stunden</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q2">
+          2. Wie viele Stunden bist du an einem <strong>Wochenendtag</strong> durchschnittlich im Internet?
+        </label>
+        <div class="radio-group" id="q2">
+          <label class="radio-card"><input type="radio" name="q2" value="unter1h"> <span>Weniger als 1 Stunde</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="1-2h"> <span>1 – 2 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="2-4h"> <span>2 – 4 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="4-6h"> <span>4 – 6 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q2" value="über6h"> <span>Mehr als 6 Stunden</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label">
+          3. Welches Gerät nutzt du am häufigsten für das Internet? <span class="optional">(Mehrfachauswahl möglich)</span>
+        </label>
+        <div class="checkbox-group" id="q3">
+          <label class="checkbox-card"><input type="checkbox" name="q3" value="smartphone"> <span>📱 Smartphone</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q3" value="tablet"> <span>📟 Tablet</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q3" value="laptop"> <span>💻 Laptop / PC</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q3" value="konsole"> <span>🎮 Spielekonsole</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q3" value="smart-tv"> <span>📺 Smart TV</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q4">
+          4. Wann nutzt du das Internet meistens? <span class="optional">(Mehrfachauswahl)</span>
+        </label>
+        <div class="checkbox-group" id="q4">
+          <label class="checkbox-card"><input type="checkbox" name="q4" value="morgens"> <span>🌅 Morgens vor der Schule</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q4" value="pause"> <span>☕ In der Pause</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q4" value="nachmittags"> <span>🌤️ Nachmittags nach der Schule</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q4" value="abends"> <span>🌙 Abends</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q4" value="nachts"> <span>🌃 Nachts (nach 22 Uhr)</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(0)">← Zurück</button>
+        <button class="btn btn-primary" onclick="goPage(2)">Weiter →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 2: SOCIAL MEDIA & APPS ─── -->
+  <section class="survey-page" id="page-2" data-page="2">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 2 von 6</span>
+        <h2 class="page-title">🎵 Social Media &amp; Apps</h2>
+        <p class="page-hint">Welche Plattformen kennst und nutzt du?</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label">
+          5. Welche Apps / Plattformen nutzt du regelmäßig? <span class="optional">(Mehrfachauswahl)</span>
+        </label>
+        <div class="app-grid" id="q5">
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="tiktok">
+            <div class="app-icon tiktok-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.21 8.21 0 0 0 4.79 1.52V6.75a4.85 4.85 0 0 1-1.02-.06z"/></svg>
+            </div>
+            <span>TikTok</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="instagram">
+            <div class="app-icon insta-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <span>Instagram</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="youtube">
+            <div class="app-icon yt-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <span>YouTube</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="whatsapp">
+            <div class="app-icon wa-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </div>
+            <span>WhatsApp</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="snapchat">
+            <div class="app-icon snap-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.166.006c.194-.004.386-.006.578-.006.78 0 3.504.087 5.136 2.512.88 1.343.88 3.107.88 4.244V7.12c0 .09.063.17.153.19l1.64.354c.294.063.485.347.428.645-.058.298-.347.49-.645.428l-1.702-.367c-.09-.02-.18.014-.236.085-.283.357-.846 1.032-1.608 1.032-.313 0-.56-.073-.786-.17-.183-.078-.357-.164-.518-.246-.337.965-.88 1.978-1.765 2.735-.93.79-2.11 1.233-3.38 1.233-1.27 0-2.45-.443-3.38-1.233-.885-.757-1.428-1.77-1.765-2.735-.161.082-.335.168-.518.246-.226.097-.473.17-.786.17-.762 0-1.325-.675-1.608-1.032-.056-.07-.146-.105-.236-.085l-1.702.367c-.298.064-.587-.13-.645-.428-.057-.298.134-.582.428-.645l1.64-.354c.09-.02.153-.1.153-.19v-.364c0-1.137 0-2.901.88-4.244C4.656.093 7.38.006 8.16.006h.578c.147 0 .293.006.44.017z"/></svg>
+            </div>
+            <span>Snapchat</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="discord">
+            <div class="app-icon discord-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            </div>
+            <span>Discord</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="twitch">
+            <div class="app-icon twitch-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+            </div>
+            <span>Twitch</span>
+          </label>
+          <label class="app-card">
+            <input type="checkbox" name="q5" value="keine">
+            <div class="app-icon none-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+            </div>
+            <span>Keine davon</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q6">
+          6. Wie lange bist du täglich auf Social-Media-Plattformen aktiv?
+        </label>
+        <div class="radio-group" id="q6">
+          <label class="radio-card"><input type="radio" name="q6" value="kaum"> <span>Kaum / gar nicht</span></label>
+          <label class="radio-card"><input type="radio" name="q6" value="unter30min"> <span>Weniger als 30 Minuten</span></label>
+          <label class="radio-card"><input type="radio" name="q6" value="30-60min"> <span>30 – 60 Minuten</span></label>
+          <label class="radio-card"><input type="radio" name="q6" value="1-2h"> <span>1 – 2 Stunden</span></label>
+          <label class="radio-card"><input type="radio" name="q6" value="über2h"> <span>Mehr als 2 Stunden</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q7">
+          7. Warum nutzt du Social Media hauptsächlich? <span class="optional">(Mehrfachauswahl)</span>
+        </label>
+        <div class="checkbox-group" id="q7">
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="kontakt"> <span>👥 Mit Freunden in Kontakt bleiben</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="unterhaltung"> <span>🎉 Unterhaltung / Zeitvertreib</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="news"> <span>📰 Nachrichten / Infos erhalten</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="musik"> <span>🎵 Musik / Videos entdecken</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="kreativ"> <span>✍️ Eigene Inhalte teilen</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q7" value="langeweile"> <span>😴 Wenn mir langweilig ist</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(1)">← Zurück</button>
+        <button class="btn btn-primary" onclick="goPage(3)">Weiter →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 3: GAMING ─── -->
+  <section class="survey-page" id="page-3" data-page="3">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 3 von 6</span>
+        <h2 class="page-title">🎮 Gaming &amp; Online-Spiele</h2>
+        <p class="page-hint">Wie oft und was spielst du?</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q8">
+          8. Wie oft spielst du Online-Spiele?
+        </label>
+        <div class="radio-group" id="q8">
+          <label class="radio-card"><input type="radio" name="q8" value="nie"> <span>Nie</span></label>
+          <label class="radio-card"><input type="radio" name="q8" value="selten"> <span>Selten (1–2x pro Monat)</span></label>
+          <label class="radio-card"><input type="radio" name="q8" value="manchmal"> <span>Manchmal (1–2x pro Woche)</span></label>
+          <label class="radio-card"><input type="radio" name="q8" value="oft"> <span>Oft (mehrmals die Woche)</span></label>
+          <label class="radio-card"><input type="radio" name="q8" value="taeglich"> <span>Täglich</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label">
+          9. Welche Spiele / Spieltypen spielst du? <span class="optional">(Mehrfachauswahl)</span>
+        </label>
+        <div class="checkbox-group" id="q9">
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="minecraft"> <span>⛏️ Minecraft</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="fortnite"> <span>🏆 Fortnite / Battle Royale</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="fifa"> <span>⚽ FIFA / Sports-Spiele</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="lol"> <span>⚔️ League of Legends / MOBA</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="roblox"> <span>🧱 Roblox</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="handy"> <span>📱 Handy-Spiele / Mobile</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="andere"> <span>🎲 Andere Spiele</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q9" value="spiele-nicht"> <span>🚫 Ich spiele nicht</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q10">
+          10. Hast du schon mal beim Spielen Geld ausgegeben (z.B. Skins, Loot Boxes)?
+        </label>
+        <div class="radio-group" id="q10">
+          <label class="radio-card"><input type="radio" name="q10" value="nein"> <span>Nein, nie</span></label>
+          <label class="radio-card"><input type="radio" name="q10" value="einmal"> <span>Ja, einmal</span></label>
+          <label class="radio-card"><input type="radio" name="q10" value="mehrmals"> <span>Ja, mehrmals</span></label>
+          <label class="radio-card"><input type="radio" name="q10" value="regelmaessig"> <span>Ja, regelmäßig</span></label>
+          <label class="radio-card"><input type="radio" name="q10" value="spiele-nicht2"> <span>Ich spiele keine Online-Spiele</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q11">
+          11. Hast du schon mal das Gefühl gehabt, zu viel Zeit mit Spielen zu verbringen?
+        </label>
+        <div class="radio-group likert-group" id="q11">
+          <label class="radio-card"><input type="radio" name="q11" value="nie"> <span>Nie</span></label>
+          <label class="radio-card"><input type="radio" name="q11" value="selten"> <span>Selten</span></label>
+          <label class="radio-card"><input type="radio" name="q11" value="manchmal"> <span>Manchmal</span></label>
+          <label class="radio-card"><input type="radio" name="q11" value="oft"> <span>Oft</span></label>
+          <label class="radio-card"><input type="radio" name="q11" value="immer"> <span>Fast immer</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(2)">← Zurück</button>
+        <button class="btn btn-primary" onclick="goPage(4)">Weiter →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 4: DATENSCHUTZ & SICHERHEIT ─── -->
+  <section class="survey-page" id="page-4" data-page="4">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 4 von 6</span>
+        <h2 class="page-title">🔒 Datenschutz &amp; Sicherheit</h2>
+        <p class="page-hint">Keine Antwort ist falsch – deine Einschätzung zählt!</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q12">
+          12. Was verstehst du unter dem Begriff <strong>„persönliche Daten"</strong>?
+        </label>
+        <div class="radio-group" id="q12">
+          <label class="radio-card"><input type="radio" name="q12" value="nur-name"> <span>Nur Name und Adresse</span></label>
+          <label class="radio-card"><input type="radio" name="q12" value="name-email"> <span>Name, Adresse und E-Mail-Adresse</span></label>
+          <label class="radio-card"><input type="radio" name="q12" value="alles-identifiz"> <span>Alles, womit man eine Person identifizieren kann (z.B. auch IP-Adresse, Standort)</span></label>
+          <label class="radio-card"><input type="radio" name="q12" value="weiss-nicht"> <span>Ich weiß es nicht genau</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label">
+          13. Was teilst du regelmäßig online? <span class="optional">(Mehrfachauswahl)</span>
+        </label>
+        <div class="checkbox-group" id="q13">
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="fotos"> <span>📸 Fotos von mir</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="standort"> <span>📍 Meinen Standort</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="meinung"> <span>💬 Meine Meinung / Gedanken</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="schule"> <span>🏫 Infos über meine Schule</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="freunde"> <span>👫 Fotos von Freunden</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q13" value="nichts"> <span>🚫 Ich teile nichts Persönliches</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q14">
+          14. Liest du Datenschutzerklärungen / AGBs, bevor du eine App nutzt?
+        </label>
+        <div class="radio-group" id="q14">
+          <label class="radio-card"><input type="radio" name="q14" value="immer"> <span>Immer</span></label>
+          <label class="radio-card"><input type="radio" name="q14" value="manchmal"> <span>Manchmal die wichtigsten Teile</span></label>
+          <label class="radio-card"><input type="radio" name="q14" value="selten"> <span>Selten</span></label>
+          <label class="radio-card"><input type="radio" name="q14" value="nie"> <span>Nie – ich klicke einfach auf „Akzeptieren"</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label">
+          15. Was weißt du über Cookies? <span class="optional">(Mehrfachauswahl – was ist richtig?)</span>
+        </label>
+        <div class="checkbox-group" id="q15">
+          <label class="checkbox-card"><input type="checkbox" name="q15" value="tracking"> <span>Cookies können mein Surfverhalten verfolgen</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q15" value="werbung"> <span>Cookies werden für personalisierte Werbung genutzt</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q15" value="kekse"> <span>Cookies sind leckere Kekse 🍪</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q15" value="loeschen"> <span>Man kann Cookies im Browser löschen</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q15" value="keine-ahnung"> <span>Ich weiß nicht was Cookies sind</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q16">
+          16. Hast du schon mal einen <strong>Fake-Account</strong> oder eine falsche Identität online erlebt?
+        </label>
+        <div class="radio-group" id="q16">
+          <label class="radio-card"><input type="radio" name="q16" value="nein"> <span>Nein</span></label>
+          <label class="radio-card"><input type="radio" name="q16" value="ja-erlebt"> <span>Ja, jemand anderes hatte einen</span></label>
+          <label class="radio-card"><input type="radio" name="q16" value="ja-selbst"> <span>Ja, ich hatte selbst einen</span></label>
+          <label class="radio-card"><input type="radio" name="q16" value="beides"> <span>Beides</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(3)">← Zurück</button>
+        <button class="btn btn-primary" onclick="goPage(5)">Weiter →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 5: WOHLBEFINDEN & REFLEXION ─── -->
+  <section class="survey-page" id="page-5" data-page="5">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 5 von 6</span>
+        <h2 class="page-title">💭 Reflexion &amp; Wohlbefinden</h2>
+        <p class="page-hint">Wie fühlst du dich beim Thema Internet?</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q17">
+          17. Wie fühlst du dich, wenn du längere Zeit kein Internet hast?
+        </label>
+        <div class="radio-group" id="q17">
+          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="entspannt"> <span>😌 Entspannt / befreit</span></label>
+          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="neutral"> <span>😐 Neutral – macht nichts</span></label>
+          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="unruhig"> <span>😬 Etwas unruhig</span></label>
+          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="nervoes"> <span>😰 Nervös / gestresst</span></label>
+          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="panik"> <span>😱 Ich kann mir das kaum vorstellen</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q18">
+          18. Hast du schon mal <strong>Cybermobbing</strong> erlebt oder beobachtet?
+        </label>
+        <div class="radio-group" id="q18">
+          <label class="radio-card"><input type="radio" name="q18" value="nein"> <span>Nein</span></label>
+          <label class="radio-card"><input type="radio" name="q18" value="beobachtet"> <span>Ja, ich habe es bei anderen beobachtet</span></label>
+          <label class="radio-card"><input type="radio" name="q18" value="betroffen"> <span>Ja, ich war selbst betroffen</span></label>
+          <label class="radio-card"><input type="radio" name="q18" value="beides"> <span>Beides</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q19">
+          19. Denkst du, dass soziale Medien einen <strong>negativen Einfluss</strong> auf dein Selbstbild haben können?
+        </label>
+        <div class="radio-group likert-group" id="q19">
+          <label class="radio-card"><input type="radio" name="q19" value="gar-nicht"> <span>Gar nicht</span></label>
+          <label class="radio-card"><input type="radio" name="q19" value="kaum"> <span>Kaum</span></label>
+          <label class="radio-card"><input type="radio" name="q19" value="manchmal"> <span>Manchmal</span></label>
+          <label class="radio-card"><input type="radio" name="q19" value="oft"> <span>Oft</span></label>
+          <label class="radio-card"><input type="radio" name="q19" value="stark"> <span>Sehr stark</span></label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q20">
+          20. Sprechen deine Eltern / Erziehungsberechtigten mit dir über deine Internetnutzung?
+        </label>
+        <div class="radio-group" id="q20">
+          <label class="radio-card"><input type="radio" name="q20" value="regelmässig"> <span>Ja, regelmäßig</span></label>
+          <label class="radio-card"><input type="radio" name="q20" value="manchmal"> <span>Manchmal</span></label>
+          <label class="radio-card"><input type="radio" name="q20" value="selten"> <span>Selten</span></label>
+          <label class="radio-card"><input type="radio" name="q20" value="nie"> <span>Nie</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(4)">← Zurück</button>
+        <button class="btn btn-primary" onclick="goPage(6)">Weiter →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 6: OFFENE FRAGEN ─── -->
+  <section class="survey-page" id="page-6" data-page="6">
+    <div class="page-card">
+      <div class="page-header">
+        <span class="page-tag">Teil 6 von 6</span>
+        <h2 class="page-title">✍️ Deine Meinung</h2>
+        <p class="page-hint">Diese Fragen sind freiwillig – du musst nichts schreiben, wenn du nicht möchtest.</p>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q21">
+          21. Was findest du am Internet am besten?
+        </label>
+        <textarea class="text-input" id="q21" name="q21" placeholder="z.B. Infos suchen, mit Freunden kommunizieren…" rows="3" maxlength="500"></textarea>
+        <span class="char-count" id="count21">0/500</span>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q22">
+          22. Was nervt dich am Internet oder findest du bedenklich?
+        </label>
+        <textarea class="text-input" id="q22" name="q22" placeholder="z.B. zu viel Werbung, Datenschutz, gefälschte Infos…" rows="3" maxlength="500"></textarea>
+        <span class="char-count" id="count22">0/500</span>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q23">
+          23. Was würdest du dir für den Umgang mit dem Internet wünschen oder ändern?
+        </label>
+        <textarea class="text-input" id="q23" name="q23" placeholder="z.B. bessere Datenschutzgesetze, mehr Kontrolle über meine Daten…" rows="3" maxlength="500"></textarea>
+        <span class="char-count" id="count23">0/500</span>
+      </div>
+
+      <div class="question-block">
+        <label class="question-label" for="q24">
+          24. Welche Themen würdest du gerne im Unterricht zum Thema Internet besprechen?
+        </label>
+        <div class="checkbox-group" id="q24">
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="datenschutz"> <span>🔒 Datenschutz praktisch erklärt</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="fakenews"> <span>📰 Fake News erkennen</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="cybermobbing"> <span>🛡️ Cybermobbing verhindern</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="algorithmen"> <span>🤖 Wie Algorithmen funktionieren</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="ki"> <span>🧠 Künstliche Intelligenz</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="programmieren"> <span>💻 Selber programmieren</span></label>
+          <label class="checkbox-card"><input type="checkbox" name="q24" value="digitalrechte"> <span>⚖️ Digitale Rechte &amp; Gesetze</span></label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="goPage(5)">← Zurück</button>
+        <button class="btn btn-primary btn-submit" onclick="submitSurvey()">
+          Umfrage abschicken
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SEITE 7: DANKE / ERGEBNIS ─── -->
+  <section class="survey-page" id="page-7" data-page="7">
+    <div class="page-card thank-you-card">
+      <div class="ty-icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" fill="var(--color-success-highlight)" stroke="var(--color-success)" stroke-width="2.5"/>
+          <path d="M20 32l8 8 16-16" stroke="var(--color-success)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="ty-title">Vielen Dank! 🎉</h2>
+      <p class="ty-text">Deine Antworten wurden gespeichert. Sie helfen dabei, ein besseres Bild vom Internetverhalten in eurer Klasse zu bekommen.</p>
+
+      <div class="result-summary" id="resultSummary"></div>
+
+      <div class="action-row">
+        <button class="btn btn-primary" onclick="showResults()">
+          📊 Meine Antworten anzeigen
+        </button>
+        <button class="btn btn-outline" onclick="exportResults()">
+          📥 Als Text speichern
+        </button>
+        <button class="btn btn-ghost btn-small" onclick="resetSurvey()">
+          Neue Umfrage starten
+        </button>
+      </div>
+
+      <div class="result-detail" id="resultDetail" style="display:none;"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>🔒 Alle Antworten werden nur lokal in deinem Browser verarbeitet – keine Daten werden übertragen.</span>
+    <span class="footer-sep">·</span>
+    <span>DSGVO-konform · Anonym · Freiwillig</span>
+  </div>
+</footer>
+
+<script src="survey.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
