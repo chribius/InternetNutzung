@@ -439,122 +439,30 @@
     </div>
   </section>
 
-  <!-- ─── SEITE 5: WOHLBEFINDEN & REFLEXION ─── -->
+  <!-- ─── SEITE 5: NOTENSCHNITT ─── -->
   <section class="survey-page" id="page-5" data-page="5">
     <div class="page-card">
       <div class="page-header">
-        <span class="page-tag">Teil 5 von 6</span>
-        <h2 class="page-title">💭 Reflexion &amp; Wohlbefinden</h2>
-        <p class="page-hint">Wie fühlst du dich beim Thema Internet?</p>
+        <span class="page-tag">Teil 5 von 5</span>
+        <h2 class="page-title">📚 Schule &amp; Noten</h2>
+        <p class="page-hint">Diese Angabe bleibt anonym und hilft, einen möglichen Zusammenhang mit der Internetnutzung zu untersuchen.</p>
       </div>
 
       <div class="question-block">
         <label class="question-label" for="q17">
-          17. Wie fühlst du dich, wenn du längere Zeit kein Internet hast?
+          17. Was ist dein ungefährer Notendurchschnitt?
         </label>
         <div class="radio-group" id="q17">
-          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="entspannt"> <span>😌 Entspannt / befreit</span></label>
-          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="neutral"> <span>😐 Neutral – macht nichts</span></label>
-          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="unruhig"> <span>😬 Etwas unruhig</span></label>
-          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="nervoes"> <span>😰 Nervös / gestresst</span></label>
-          <label class="radio-card emoji-radio"><input type="radio" name="q17" value="panik"> <span>😱 Ich kann mir das kaum vorstellen</span></label>
-        </div>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q18">
-          18. Hast du schon mal <strong>Cybermobbing</strong> erlebt oder beobachtet?
-        </label>
-        <div class="radio-group" id="q18">
-          <label class="radio-card"><input type="radio" name="q18" value="nein"> <span>Nein</span></label>
-          <label class="radio-card"><input type="radio" name="q18" value="beobachtet"> <span>Ja, ich habe es bei anderen beobachtet</span></label>
-          <label class="radio-card"><input type="radio" name="q18" value="betroffen"> <span>Ja, ich war selbst betroffen</span></label>
-          <label class="radio-card"><input type="radio" name="q18" value="beides"> <span>Beides</span></label>
-        </div>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q19">
-          19. Denkst du, dass soziale Medien einen <strong>negativen Einfluss</strong> auf dein Selbstbild haben können?
-        </label>
-        <div class="radio-group likert-group" id="q19">
-          <label class="radio-card"><input type="radio" name="q19" value="gar-nicht"> <span>Gar nicht</span></label>
-          <label class="radio-card"><input type="radio" name="q19" value="kaum"> <span>Kaum</span></label>
-          <label class="radio-card"><input type="radio" name="q19" value="manchmal"> <span>Manchmal</span></label>
-          <label class="radio-card"><input type="radio" name="q19" value="oft"> <span>Oft</span></label>
-          <label class="radio-card"><input type="radio" name="q19" value="stark"> <span>Sehr stark</span></label>
-        </div>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q20">
-          20. Sprechen deine Eltern / Erziehungsberechtigten mit dir über deine Internetnutzung?
-        </label>
-        <div class="radio-group" id="q20">
-          <label class="radio-card"><input type="radio" name="q20" value="regelmässig"> <span>Ja, regelmäßig</span></label>
-          <label class="radio-card"><input type="radio" name="q20" value="manchmal"> <span>Manchmal</span></label>
-          <label class="radio-card"><input type="radio" name="q20" value="selten"> <span>Selten</span></label>
-          <label class="radio-card"><input type="radio" name="q20" value="nie"> <span>Nie</span></label>
+          <label class="radio-card"><input type="radio" name="q17" value="1.0-1.9"> <span>1,0 – 1,9</span></label>
+          <label class="radio-card"><input type="radio" name="q17" value="2.0-2.4"> <span>2,0 – 2,4</span></label>
+          <label class="radio-card"><input type="radio" name="q17" value="2.5-2.9"> <span>2,5 – 2,9</span></label>
+          <label class="radio-card"><input type="radio" name="q17" value="3.0-3.4"> <span>3,0 – 3,4</span></label>
+          <label class="radio-card"><input type="radio" name="q17" value="3.5+"> <span>&gt; 3,4</span></label>
         </div>
       </div>
 
       <div class="btn-row">
         <button class="btn btn-ghost" onclick="goPage(4)">← Zurück</button>
-        <button class="btn btn-primary" onclick="goPage(6)">Weiter →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SEITE 6: OFFENE FRAGEN ─── -->
-  <section class="survey-page" id="page-6" data-page="6">
-    <div class="page-card">
-      <div class="page-header">
-        <span class="page-tag">Teil 6 von 6</span>
-        <h2 class="page-title">✍️ Deine Meinung</h2>
-        <p class="page-hint">Diese Fragen sind freiwillig – du musst nichts schreiben, wenn du nicht möchtest.</p>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q21">
-          21. Was findest du am Internet am besten?
-        </label>
-        <textarea class="text-input" id="q21" name="q21" placeholder="z.B. Infos suchen, mit Freunden kommunizieren…" rows="3" maxlength="500"></textarea>
-        <span class="char-count" id="count21">0/500</span>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q22">
-          22. Was nervt dich am Internet oder findest du bedenklich?
-        </label>
-        <textarea class="text-input" id="q22" name="q22" placeholder="z.B. zu viel Werbung, Datenschutz, gefälschte Infos…" rows="3" maxlength="500"></textarea>
-        <span class="char-count" id="count22">0/500</span>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q23">
-          23. Was würdest du dir für den Umgang mit dem Internet wünschen oder ändern?
-        </label>
-        <textarea class="text-input" id="q23" name="q23" placeholder="z.B. bessere Datenschutzgesetze, mehr Kontrolle über meine Daten…" rows="3" maxlength="500"></textarea>
-        <span class="char-count" id="count23">0/500</span>
-      </div>
-
-      <div class="question-block">
-        <label class="question-label" for="q24">
-          24. Welche Themen würdest du gerne im Unterricht zum Thema Internet besprechen?
-        </label>
-        <div class="checkbox-group" id="q24">
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="datenschutz"> <span>🔒 Datenschutz praktisch erklärt</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="fakenews"> <span>📰 Fake News erkennen</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="cybermobbing"> <span>🛡️ Cybermobbing verhindern</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="algorithmen"> <span>🤖 Wie Algorithmen funktionieren</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="ki"> <span>🧠 Künstliche Intelligenz</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="programmieren"> <span>💻 Selber programmieren</span></label>
-          <label class="checkbox-card"><input type="checkbox" name="q24" value="digitalrechte"> <span>⚖️ Digitale Rechte &amp; Gesetze</span></label>
-        </div>
-      </div>
-
-      <div class="btn-row">
-        <button class="btn btn-ghost" onclick="goPage(5)">← Zurück</button>
         <button class="btn btn-primary btn-submit" onclick="submitSurvey()">
           Umfrage abschicken
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -563,8 +471,8 @@
     </div>
   </section>
 
-  <!-- ─── SEITE 7: DANKE / ERGEBNIS ─── -->
-  <section class="survey-page" id="page-7" data-page="7">
+  <!-- ─── SEITE 6: DANKE / ERGEBNIS ─── -->
+  <section class="survey-page" id="page-6" data-page="6">
     <div class="page-card thank-you-card">
       <div class="ty-icon">
         <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
@@ -577,9 +485,25 @@
 
       <div class="result-summary" id="resultSummary"></div>
 
+      <!-- Visualisierung: Internetnutzung vs. Notenschnitt -->
+      <div class="chart-section" id="chartSection" style="display:none;">
+        <h3 class="chart-title">📊 Deine Antworten im Überblick</h3>
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card-title">Tägliche Internetnutzung (Schultag)</div>
+            <canvas id="chartNutzung" width="300" height="220"></canvas>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-title">Internetzeit vs. Notenschnitt</div>
+            <canvas id="chartKorrelation" width="300" height="220"></canvas>
+          </div>
+        </div>
+        <p class="chart-hint">Die Auswertung zeigt deine eigenen Angaben. Für eine Klassenauswertung exportieren alle Schüler:innen ihre Antworten, und die Lehrkraft führt die Daten zusammen.</p>
+      </div>
+
       <div class="action-row">
-        <button class="btn btn-primary" onclick="showResults()">
-          📊 Meine Antworten anzeigen
+        <button class="btn btn-primary" onclick="showCharts()">
+          📊 Auswertung anzeigen
         </button>
         <button class="btn btn-outline" onclick="exportResults()">
           📥 Als Text speichern
@@ -588,8 +512,6 @@
           Neue Umfrage starten
         </button>
       </div>
-
-      <div class="result-detail" id="resultDetail" style="display:none;"></div>
     </div>
   </section>
 
@@ -606,6 +528,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 <script src="survey.js"></script>
 <script data-pplx-inline-edit>
 (function(){
